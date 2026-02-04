@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Downloader Pro</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+    body{
+      background: radial-gradient(circle at 20% 20%, #0f172a, #020617 60%);
+      color:#fff;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 6%;
+      position:fixed;
+      width:100%;
+      top:0;
+      backdrop-filter: blur(12px);
+      background: rgba(0,0,0,0.35);
+      z-index:1000;
+    }
+
+    .logo{font-size:18px;font-weight:700}
+
+    .menu-btn{
+      width:40px;height:40px;border-radius:12px;background:#1e293b;
+      display:flex;align-items:center;justify-content:center;cursor:pointer
+    }
+
+    /* ===== HERO ===== */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 16px 40px;
+    }
+
+    .title{
+      font-size:clamp(26px,6vw,52px);
+      font-weight:700;
+      background: linear-gradient(90deg,#60a5fa,#22d3ee);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:14px;
+    }
+
+    .subtitle{color:#cbd5e1;margin-bottom:32px;font-size:14px}
+
+    /* ===== API BOX ===== */
+    .api-box{
+      width:100%;
+      max-width:700px; /* FIX: prevents overflow */
+      background:rgba(255,255,255,0.06);
+      padding:20px;
+      border-radius:22px;
+      backdrop-filter: blur(18px);
+      box-shadow:0 20px 60px rgba(0,0,0,.6);
+    }
+
+    /* CRITICAL FIX FOR MOBILE */
+    iframe{
+      width:100% !important;  /* was fixed 560px -> caused break */
+      max-width:100%;
+      border:none;
+      border-radius:14px;
+    }
+
+    .button-area{
+      margin-top:16px;
+      display:flex;
+      justify-content:center;
+    }
+
+    /* ===== BG BLOBS ===== */
+    .blob{
+      position:absolute;
+      width:350px;height:350px;
+      background:linear-gradient(45deg,#3b82f6,#06b6d4);
+      filter: blur(130px);
+      opacity:.25;border-radius:50%; proving?;
+      animation: float 10s infinite alternate;
+    }
+
+    .b1{top:-120px;left:-120px}
+    .b2{bottom:-120px;right:-120px}
+
+    /* ===== FEATURES ===== */
+    .features{
+      padding:60px 6%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:#0f172a;
+      padding:22px;
+      border-radius:20px;
+      text-align:center;
+      transition:.25s;
+    }
+
+    .card:hover{transform:translateY(-6px)}
+
+    footer{text-align:center;padding:30px 10px;color:#94a3b8;font-size:13px}
+
+    @keyframes float{from{transform:translateY(0)}to{transform:translateY(50px)}}
+
+    /* EXTRA MOBILE TIGHTENING */
+    @media(max-width:480px){
+      .api-box{padding:14px}
+      .subtitle{font-size:12px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <div class="nav">
+    <div class="logo">Smart India Downloader</div>
+    <div class="menu-btn">☰</div>
+  </div>
+
+  <section class="hero">
+    <h1 class="title">Download YouTube Audio Instantly</h1>
+    <p class="subtitle">Fast • Clean • No Signup</p>
+
+    <div class="api-box">
+      <iframe src="https://tubeapi.org/form" height="112"></iframe>
+      <div class="button-area">
+        <iframe src="https://tubeapi.org/button#dQw4w9WgXcQ" height="48" style="max-width:180px"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card"><h3>⚡ Super Fast</h3><p>No wait time</p></div>
+    <div class="card"><h3>🎵 High Quality</h3><p>Best bitrate</p></div>
+    <div class="card"><h3>🔒 Secure</h3><p>No login required</p></div>
+  </section>
+
+  <footer>Built for speed. No nonsense. <b> Smart India Tech </b></footer>
+
+</body>
+</html>
+
