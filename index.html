@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Downloader Pro</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background: radial-gradient(circle at 20% 20%, #0f172a, #020617 60%);
+      color:#fff;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      position:fixed;
+      width:100%;
+      top:0;
+      backdrop-filter: blur(12px);
+      background: rgba(0,0,0,0.35);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .menu-btn{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:#1e293b;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .menu-btn:hover{transform:scale(1.1)}
+
+    /* ===== HERO ===== */
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 20px;
+    }
+
+    .title{
+      font-size:52px;
+      font-weight:700;
+      background: linear-gradient(90deg,#60a5fa,#22d3ee);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:16px;
+      animation: fadeUp 1s ease;
+    }
+
+    .subtitle{
+      color:#cbd5e1;
+      margin-bottom:40px;
+      animation: fadeUp 1.4s ease;
+    }
+
+    /* ===== API CONTAINER ===== */
+    .api-box{
+      background:rgba(255,255,255,0.06);
+      padding:28px;
+      border-radius:24px;
+      backdrop-filter: blur(18px);
+      box-shadow:0 20px 60px rgba(0,0,0,.6);
+      animation: fadeUp 1.8s ease;
+    }
+
+    iframe{
+      border:none;
+      border-radius:16px;
+    }
+
+    .button-area{
+      margin-top:22px;
+      display:flex;
+      justify-content:center;
+    }
+
+    /* ===== ANIMATION BG ===== */
+    .blob{
+      position:absolute;
+      width:450px;
+      height:450px;
+      background:linear-gradient(45deg,#3b82f6,#06b6d4);
+      filter: blur(150px);
+      opacity:.25;
+      border-radius:50%;
+      animation: float 10s infinite alternate;
+    }
+
+    .b1{top:-120px;left:-120px}
+    .b2{bottom:-120px;right:-120px}
+
+    /* ===== FEATURES ===== */
+    .features{
+      padding:80px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#0f172a;
+      padding:28px;
+      border-radius:22px;
+      transition:.3s;
+      text-align:center;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,.5);
+    }
+
+    .card h3{margin-bottom:10px}
+
+    /* ===== FOOTER ===== */
+    footer{
+      text-align:center;
+      padding:40px 10px;
+      color:#94a3b8;
+    }
+
+    /* ===== KEYFRAMES ===== */
+    @keyframes float{
+      from{transform:translateY(0)}
+      to{transform:translateY(60px)}
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(40px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+
+    @media(max-width:600px){
+      .title{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="logo">SID</div>
+    <div class="menu-btn">☰</div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="title">Download YouTube Audio Instantly</h1>
+    <p class="subtitle">Fast • Clean • No Signup</p>
+
+    <div class="api-box">
+
+      <!-- TubeAPI Form -->
+      <iframe src="https://tubeapi.org/form" width="560" height="112" title="Form API"></iframe>
+
+      <div class="button-area">
+        <!-- Example Button API (replace VIDEOID manually if needed) -->
+        <iframe src="https://tubeapi.org/button#dQw4w9WgXcQ" width="144" height="48" title="Button API"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="card">
+      <h3>⚡ Super Fast</h3>
+      <p>Direct conversion without waiting or ads.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎵 High Quality</h3>
+      <p>Best bitrate MP3 output for music lovers.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔒 Secure</h3>
+      <p>No login. No data storage. Fully private.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Mobile Ready</h3>
+      <p>Works perfectly on phones and tablets.</p>
+    </div>
+  </section>
+
+  <footer>
+    Built for speed. No nonsense. Just download.ㅤㅤ
+    <b>Built with ♥️ by Smart India Tech</b>
+  </footer>
+
+</body>
+</html>
+
